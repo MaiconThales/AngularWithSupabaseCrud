@@ -1,0 +1,11 @@
+<!--<router-outlet></router-outlet>-->
+<button (click)="addTodo()">Add</button>
+
+<p>Resultado:</p>
+<div style="border-style: solid; width: 10%;" *ngFor="let r of resultTodo; let i = index">
+  <p>{{r.id}}</p>
+  <p>{{r.name}}</p>
+  <p (click)="check(r, i)">{{r.done}}</p>
+  <button (click)="update(r, i)">Test Alter Value</button>
+  <button (click)="remove(r, i)">Remove item</button>
+</div>
